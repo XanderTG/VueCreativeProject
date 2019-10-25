@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Honduras' Kitchen</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/VueCreativeProject/styles.css">
+
+</head>
+
+<body>
+
+    <img id="headImage" src="/VueCreativeProject/image3.jpg">
+    <div id="overlayText">
+        <h1 id="overlay">Welcome to Mario's Kitchen</h1>
+    </div>
+
+
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div id=column1 class="col-md-4 col-s-12">
+                    <form v-on:click.prevent="fetchREST">
+                        <label>Enter the food you want to make: </label>
+                        <input id="recipeInput" type="text"></input>
+                        <!--<button id="recipeSubmit" v-on:click="fetchRest">Submit</button>-->
+                        <input id="recipeSubmit" type="submit" value="submit"></input>
+                    </form>
+                </div>
+                <div id=column2 class="col-md-4 col-s-12">
+                    <div>
+                        <img id="theImage" v-bind:src="image">
+                        <b><p>{{title}}</p></b>
+                    </div>
+                </div>
+                <div id=column3 class="col-md-4 col-s-12">
+                    <div>
+                        <ul>
+                            <li v-for="item in ingredients">
+                                {{item.name}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer" class="fixed">
+        <br id="smallFooterBreak">
+        <a id="github" href="https://github.com/XanderTG/CreativeProject2">Github</a>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <script text="type/javascript" src="/VueCreativeProject/script.js">
+    </script>
+</body>
+
+
+
+</html>
